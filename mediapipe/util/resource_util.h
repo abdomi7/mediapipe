@@ -17,6 +17,7 @@
 
 #include <string>
 
+#include "mediapipe/framework/port/status.h"
 #include "mediapipe/framework/port/statusor.h"
 
 namespace mediapipe {
@@ -38,12 +39,13 @@ namespace mediapipe {
 // accepts file paths. Code that can access data as a stream or as a buffer
 // should read from an asset directly on Android; an API for this will be
 // provided later. TODO.
-absl::StatusOr<std::string> PathToResourceAsFile(const std::string& path);
+::mediapipe::StatusOr<std::string> PathToResourceAsFile(
+    const std::string& path);
 
 // Reads the entire contents of a resource. The search path is as in
 // PathToResourceAsFile.
-absl::Status GetResourceContents(const std::string& path, std::string* output,
-                                 bool read_as_binary = true);
+::mediapipe::Status GetResourceContents(const std::string& path,
+                                        std::string* output);
 
 }  // namespace mediapipe
 

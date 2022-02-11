@@ -21,8 +21,9 @@ cc_binary(
     linkshared = 1,
     linkstatic = 1,
     deps = [
-        "//mediapipe/graphs/selfie_segmentation:selfie_segmentation_gpu_deps",
+        "//mediapipe/graphs/selfie_segmentation:mobile_calculators",
         "//mediapipe/java/com/google/mediapipe/framework/jni:mediapipe_framework_jni",
+        
     ],
 )
 
@@ -38,6 +39,9 @@ android_binary(
     assets = [
         "//mediapipe/graphs/selfie_segmentation:selfie_segmentation_gpu.binarypb",
         "//mediapipe/modules/selfie_segmentation:selfie_segmentation.tflite",
+        "//mediapipe/calculators/image/testdata:clouds2.png",
+        "//mediapipe/calculators/image/testdata:stars.png",
+        "//mediapipe/calculators/image/testdata:buildings.jpg",
     ],
     assets_dir = "",
     manifest = "//mediapipe/examples/android/src/java/com/google/mediapipe/apps/basic:AndroidManifest.xml",

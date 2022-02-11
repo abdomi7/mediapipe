@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-licenses(["notice"])
+licenses(["notice"])  # Apache 2.0
 
 filegroup(
     name = "test_images",
@@ -24,4 +24,8 @@ filegroup(
         "front_camera_pixel2.jpg",
     ],
     visibility = ["//visibility:public"],
+)
+
+exports_files(
+    srcs = glob(["**"]),
 )

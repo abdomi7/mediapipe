@@ -60,7 +60,7 @@ public:
     
 
     if (status.ok()){
-    background = cv::imread(status.ValueOrDie(), 1);
+    background = cv::imread(status.value(), 1);
     }
 
     ///////////////////////////////// DESKTOP Asset reading method

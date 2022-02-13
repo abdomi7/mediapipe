@@ -39,8 +39,6 @@ android_binary(
     assets = [
         "//mediapipe/graphs/selfie_segmentation:selfie_segmentation_gpu.binarypb",
         "//mediapipe/modules/selfie_segmentation:selfie_segmentation.tflite",
-        "//mediapipe/calculators/image/testdata:clouds2.png",
-        "//mediapipe/calculators/image/testdata:stars.png",
         "//mediapipe/calculators/image/testdata:buildings.jpg",
     ],
     assets_dir = "",
